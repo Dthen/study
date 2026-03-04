@@ -5,19 +5,19 @@ import os
 from pathlib import Path
 
 SECTIONS = {
-    'flashcards': {'title': '🎴 Flashcards', 'color': '#4CAF50'},
-    'quizzes': {'title': '🎯 Quizzes', 'color': '#2196F3'},
-    'mindmaps': {'title': '🧠 Mind Maps', 'color': '#9C27B0'},
-    'anki': {'title': '🃏 Anki Decks', 'color': '#FF9800'}
+    'flashcards': {'title': '🎴 Flashcards', 'color': '#4CAF50', 'exts': ['.html']},
+    'quizzes': {'title': '🎯 Quizzes', 'color': '#2196F3', 'exts': ['.html']},
+    'mindmaps': {'title': '🧠 Mind Maps', 'color': '#9C27B0', 'exts': ['.html']},
+    'anki': {'title': '🃏 Anki Decks', 'color': '#FF9800', 'exts': ['.txt']}
 }
 
-def get_files(section):
+def get_files(section, allowed_exts):
     path = Path(section)
     if not path.exists():
         return []
     files = []
     for f in sorted(path.iterdir()):
-        if f.is_file():
+        if f.is_file() and f.suffix.lower() in allowed_exts:
             files.append({
                 'name': f.stem.replace('_', ' ').title(),
                 'filename': f.name,
@@ -28,7 +28,7 @@ def get_files(section):
 def generate():
     sections = []
     for folder, cfg in SECTIONS.items():
-        files = get_files(folder)
+        files = get_files(folder, cfg['exts'])
         if not files:
             continue
         links = []
@@ -56,7 +56,7 @@ footer{{text-align:center;padding:2rem;color:#8892b0;font-size:.9rem}}
 </style></head><body>
 <div class="container"><header><h1>📚 Study Materials</h1><p class="subtitle">Interactive flashcards, quizzes, mind maps & Anki decks</p></header>
 {''.join(sections) if sections else '<div style="text-align:center;padding:4rem;color:#8892b0"><h2>📝 No materials yet</h2><p>Add files to the folders and they will appear here!</p></div>'}
-<footer><p>Auto-generated • Last updated: {os.popen("date -u +%Y-%m-%d %H:%M UTC").read().strip()}</p></footer>
+<footer><p>Auto-generated • Last updated: {os.popen("date -u +%Y-%m-%dT%H:%M:%SZ").read().strip()}</p></footer>
 </div></body></html>'''
     
     with open('index.html', 'w') as f:
