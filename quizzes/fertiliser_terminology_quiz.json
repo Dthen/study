@@ -1,0 +1,265 @@
+{
+  "title": "Plant Nutrition & Fertiliser Terminology (NQGHS002 LO2)",
+  "questions": [
+    {
+      "question": "What do the three numbers on fertiliser containers represent?",
+      "options": [
+        "The price, weight, and brand of the fertiliser",
+        "The percentage by weight of macronutrients N, P, and K",
+        "The manufacturing date, batch number, and expiry",
+        "The water content, pH level, and salt concentration"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about NPK analysis",
+      "correctExplanation": "The three numbers indicate the percentage by weight of the macronutrients Nitrogen (N), Phosphorus (P), and Potassium (K) available to plants.",
+      "wrongExplanation": "The three numbers represent the NPK (Nitrogen, Phosphorus, Potassium) percentage by weight, not manufacturing details."
+    },
+    {
+      "question": "In what form is Nitrogen quoted on fertiliser labels?",
+      "options": [
+        "Pure nitrogen gas (N\u2082)",
+        "Ammonia (NH\u2083) or Nitrate (NO\u2083) or a mixture of both",
+        "Urea only",
+        "Organic compost"
+      ],
+      "correctIndex": 1,
+      "hint": "The text mentions two specific forms",
+      "correctExplanation": "Nitrogen is quoted as either Ammonia (NH\u2083) or Nitrate (NO\u2083) or a mixture of both - forms that are soluble and available to plants.",
+      "wrongExplanation": "Nitrogen is quoted as Ammonia (NH\u2083) or Nitrate (NO\u2083), not as pure gas or just urea."
+    },
+    {
+      "question": "Phosphorus in fertiliser analysis is expressed in what form?",
+      "options": [
+        "Elemental phosphorus (P)",
+        "Phosphoric acid (H\u2083PO\u2084)",
+        "Phosphorus Pentoxide (P\u2082O\u2085)",
+        "Calcium phosphate"
+      ],
+      "correctIndex": 2,
+      "hint": "It's an oxide form",
+      "correctExplanation": "Phosphorus is expressed as Phosphorus Pentoxide (P\u2082O\u2085), which is the standard form for fertiliser analysis.",
+      "wrongExplanation": "Phosphorus is expressed as Phosphorus Pentoxide (P\u2082O\u2085), not elemental phosphorus or phosphoric acid."
+    },
+    {
+      "question": "Potassium in fertiliser analysis is expressed in what form?",
+      "options": [
+        "Elemental potassium (K)",
+        "Potassium Chloride (KCl)",
+        "Potassium Carbonate (K\u2082CO\u2083)",
+        "Potassium Oxide (K\u2082O)"
+      ],
+      "correctIndex": 3,
+      "hint": "Similar to phosphorus, it's an oxide",
+      "correctExplanation": "Potassium is expressed as Potassium Oxide (K\u2082O) in fertiliser analysis.",
+      "wrongExplanation": "Potassium is expressed as Potassium Oxide (K\u2082O), matching the format used for phosphorus."
+    },
+    {
+      "question": "How much Nitrogen is in a 25kg bag of 20:40:10 fertiliser?",
+      "options": [
+        "2.5kg",
+        "5kg",
+        "10kg",
+        "20kg"
+      ],
+      "correctIndex": 1,
+      "hint": "20% of 25kg",
+      "correctExplanation": "A 20:40:10 analysis means 20% N, 40% P, 10% K. 20% of 25kg = 5kg of Nitrogen.",
+      "wrongExplanation": "With 20% nitrogen in a 25kg bag: 25kg \u00d7 0.20 = 5kg of Nitrogen."
+    },
+    {
+      "question": "What does a fertiliser with analysis 3:3:6 and 5:5:10 have in common?",
+      "options": [
+        "They are both organic fertilisers",
+        "They have the same nutrient ratio of 1:1:2",
+        "They contain the same total weight of nutrients",
+        "They are both controlled release fertilisers"
+      ],
+      "correctIndex": 1,
+      "hint": "Divide each number by its lowest common factor",
+      "correctExplanation": "Both fertilisers have a nutrient ratio of 1:1:2. 3:3:6 divides by 3 \u2192 1:1:2, and 5:5:10 divides by 5 \u2192 1:1:2.",
+      "wrongExplanation": "Both fertilisers reduce to a 1:1:2 nutrient ratio when broken down to lowest common factors."
+    },
+    {
+      "question": "What is another name for 'Nutrient Ratio'?",
+      "options": [
+        "NPK Value",
+        "PER (Plant Food Ratio)",
+        "Fertiliser Grade",
+        "Analysis Factor"
+      ],
+      "correctIndex": 1,
+      "hint": "The text mentions this acronym",
+      "correctExplanation": "Nutrient ratio is also known as PER (Plant Food Ratio), often given as recommendations for fertiliser applications.",
+      "wrongExplanation": "Nutrient ratio is also called PER (Plant Food Ratio), as mentioned in the text."
+    },
+    {
+      "question": "Which statement about inorganic fertilisers is TRUE?",
+      "options": [
+        "They are always organic in origin",
+        "They are slow release by nature",
+        "They produce a rapid response in plant growth",
+        "They vary in particle size"
+      ],
+      "correctIndex": 2,
+      "hint": "Think about availability to plants",
+      "correctExplanation": "Inorganic fertilisers contain nutrients in a form readily available for plant use, producing a rapid response in plant growth.",
+      "wrongExplanation": "Inorganic fertilisers are mined/quarried/manufactured, act quickly, have consistent analysis, and uniform particle size."
+    },
+    {
+      "question": "Which of the following is NOT an exception to slow-release organic fertilisers?",
+      "options": [
+        "Dried blood",
+        "Urea",
+        "Bone meal",
+        "Both A and B are exceptions"
+      ],
+      "correctIndex": 2,
+      "hint": "The text mentions two fast-acting exceptions",
+      "correctExplanation": "Dried blood and urea are the exceptions that are fast-acting. Bone meal is a typical slow-release organic fertiliser.",
+      "wrongExplanation": "Dried blood and urea are specifically mentioned as fast-acting exceptions to slow-release organic fertilisers."
+    },
+    {
+      "question": "What is a key advantage of organic fertilisers regarding plant safety?",
+      "options": [
+        "They are cheaper than inorganic",
+        "There is less risk of scorch to plant leaves or roots",
+        "They work faster than inorganic",
+        "They have more consistent nutrient content"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about gentle release",
+      "correctExplanation": "Organic fertilisers release nutrients slowly, so there is less risk of scorch (fertiliser burn) to plant leaves or roots.",
+      "wrongExplanation": "Organic fertilisers have less risk of scorch because nutrients must be converted by soil organisms before becoming available."
+    },
+    {
+      "question": "What characterises slow-release fertiliser particle size?",
+      "options": [
+        "All particles are exactly the same size",
+        "Larger particles take longer to break down, extending availability",
+        "Particles dissolve immediately on contact with water",
+        "Particle size has no effect on release rate"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about surface area",
+      "correctExplanation": "Slow-release organic fertilisers vary in particle size. Larger particles take longer to break down, extending the period of nutrient availability.",
+      "wrongExplanation": "Larger particles of slow-release fertiliser take longer to break down, which extends the period of nutrient availability."
+    },
+    {
+      "question": "How does controlled-release fertiliser work?",
+      "options": [
+        "It releases all nutrients at once when applied",
+        "It has a climate-controlled mechanism that adjusts release based on temperature and moisture",
+        "It only releases nutrients when manually activated",
+        "It requires soil organisms to break it down"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about environmental triggers",
+      "correctExplanation": "Controlled-release fertiliser has a mechanism that releases nutrients based on climate - as temperature rises and moisture is available, more nutrients are released.",
+      "wrongExplanation": "Controlled-release fertiliser is structured to release nutrients over months based on temperature and moisture conditions."
+    },
+    {
+      "question": "What is the main characteristic of traditional/conventional release fertilisers?",
+      "options": [
+        "They release nutrients over several years",
+        "They have no controlling factors - nutrients release, peak and finish quickly",
+        "They only release nutrients at night",
+        "They require electricity to activate"
+      ],
+      "correctIndex": 1,
+      "hint": "Think 'quick release'",
+      "correctExplanation": "Traditional/conventional release fertilisers have no controlling factors. The nutrients release, peak and finish in a short time, often in weeks.",
+      "wrongExplanation": "Traditional release fertilisers have no controlling factors and release nutrients quickly, often finishing in a matter of weeks."
+    },
+    {
+      "question": "What particle size range characterises 'prilled' fertiliser?",
+      "options": [
+        "0.5 - 1.0mm",
+        "1.5 - 2.0mm",
+        "2 - 4mm",
+        "5 - 10mm"
+      ],
+      "correctIndex": 1,
+      "hint": "Smaller than granular",
+      "correctExplanation": "Prilled fertiliser has a particle size of 1.5 - 2.0mm, made by cooling liquid into solid pellets, resulting in round, free-flowing fertiliser.",
+      "wrongExplanation": "Prilled fertiliser particles are 1.5-2.0mm, smaller than granular (2-4mm)."
+    },
+    {
+      "question": "What particle size range characterises 'granular' fertiliser?",
+      "options": [
+        "0.5 - 1.0mm",
+        "1.5 - 2.0mm",
+        "2 - 4mm",
+        "5 - 10mm"
+      ],
+      "correctIndex": 2,
+      "hint": "Larger than prilled",
+      "correctExplanation": "Granular fertiliser has a particle size of 2 - 4mm and is free from dust.",
+      "wrongExplanation": "Granular fertiliser particles are 2-4mm, larger than prilled (1.5-2.0mm)."
+    },
+    {
+      "question": "Why might liquid fertiliser be prone to leaching?",
+      "options": [
+        "It is too heavy",
+        "As it is soluble, it can quickly wash away with water",
+        "It evaporates before plants can use it",
+        "It reacts with air to form gas"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about water solubility",
+      "correctExplanation": "Liquid fertilisers are soluble and have a quick response, but this solubility means they can be prone to leaching (washing away) with water.",
+      "wrongExplanation": "Liquid fertilisers are soluble, which allows quick uptake but also makes them prone to leaching away with water."
+    },
+    {
+      "question": "What type of fertiliser is recommended for Spring/Summer turf?",
+      "options": [
+        "Low in N, high in K",
+        "High in N",
+        "High in P only",
+        "Balanced 1:1:1 ratio"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about grass growth season",
+      "correctExplanation": "Spring/summer turf fertiliser is high in N (Nitrogen) to compensate for N lost due to removal of clippings and to aid recovery from wear.",
+      "wrongExplanation": "Spring/summer fertiliser is high in Nitrogen to replace nutrients lost from clipping removal and support growth."
+    },
+    {
+      "question": "What type of fertiliser is recommended for Autumn/Winter turf?",
+      "options": [
+        "Low in N, high in K",
+        "High in N",
+        "High in P only",
+        "Balanced 1:1:1 ratio"
+      ],
+      "correctIndex": 0,
+      "hint": "Think about hardening grass for cold",
+      "correctExplanation": "Autumn/winter fertiliser is low in N, high in K (Potassium). This hardens up the grass to withstand frost and wear.",
+      "wrongExplanation": "Autumn/winter fertiliser is low in N, high in K to harden grass against frost and wear."
+    },
+    {
+      "question": "What is 'base dressing'?",
+      "options": [
+        "Fertiliser applied after mowing",
+        "Fertiliser applied to established turf",
+        "Fertiliser applied to soil BEFORE sowing grass seed or laying turf",
+        "Fertiliser applied only in winter"
+      ],
+      "correctIndex": 2,
+      "hint": "Think 'base' = foundation",
+      "correctExplanation": "Base dressing is fertiliser applied to the soil before sowing grass seed or laying turf - establishing the nutrient foundation.",
+      "wrongExplanation": "Base dressing is applied to soil BEFORE sowing grass seed or laying turf, as opposed to top dressing."
+    },
+    {
+      "question": "What is 'top dressing'?",
+      "options": [
+        "Fertiliser applied to the soil surface",
+        "Fertiliser applied to established turf",
+        "Fertiliser mixed into the soil before planting",
+        "Fertiliser applied only in spring"
+      ],
+      "correctIndex": 1,
+      "hint": "Think 'top' = existing surface",
+      "correctExplanation": "Top dressing is fertiliser applied to established turf (existing grass), as opposed to base dressing which is applied before planting.",
+      "wrongExplanation": "Top dressing is applied to established turf, while base dressing is applied before sowing or laying turf."
+    }
+  ]
+}

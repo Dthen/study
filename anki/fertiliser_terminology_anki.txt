@@ -1,0 +1,39 @@
+What do the three numbers on fertiliser containers represent?	The percentage by weight of the macronutrients N (Nitrogen), P (Phosphorus), and K (Potassium) available to plants
+In what form is Nitrogen quoted on fertiliser labels?	As Ammonia (NH₃) or Nitrate (NO₃) or a mixture of both
+In what form is Phosphorus expressed in fertiliser analysis?	Phosphorus Pentoxide (P₂O₅)
+In what form is Potassium expressed in fertiliser analysis?	Potassium Oxide (K₂O)
+How much Nitrogen is in a 25kg bag of 20:40:10 fertiliser?	5kg (20% of 25kg)
+How much Phosphorus is in a 25kg bag of 20:40:10 fertiliser?	10kg (40% of 25kg)
+How much Potassium is in a 25kg bag of 20:40:10 fertiliser?	2.5kg (10% of 25kg)
+What is nutrient ratio?	The fertiliser analysis broken down into the lowest common multiplier
+What do fertilisers 3:3:6 and 5:5:10 have in common?	Both have a nutrient ratio of 1:1:2
+What is another name for 'Nutrient Ratio'?	PER (Plant Food Ratio)
+What are inorganic fertilisers?	Fertilisers that are mined, quarried or manufactured
+Why do inorganic fertilisers act quickly?	They contain plant nutrients in a form readily available for plant use
+What are two characteristics of inorganic fertilisers?	Consistent analysis and uniform particle size
+What response do inorganic fertilisers produce in plants?	A rapid response in plant growth
+What are organic fertilisers?	Fertilisers of plant or animal origin
+Why are organic fertilisers slow release?	They contain few nutrients in a soluble form; nutrients must be converted by soil organisms
+What are two exceptions to slow-release organic fertilisers?	Dried blood and urea (both are fast acting)
+What is a key safety advantage of organic fertilisers?	Less risk of scorch (fertiliser burn) to plant leaves or roots
+What characterises slow-release fertiliser?	Organic fertilisers that vary in particle size; larger particles take longer to break down
+How does controlled-release fertiliser work?	Has a climate-controlled mechanism; releases more nutrients as temperature rises and moisture is available
+How long can controlled-release fertiliser be structured to provide nutrients?	Several months
+What is the main characteristic of traditional/conventional release fertilisers?	Have no controlling factors; nutrients release, peak and finish quickly, often in weeks
+What particle size characterises prilled fertiliser?	1.5 - 2.0mm
+How is prilled fertiliser made?	By cooling liquid into solid pellets
+What is a characteristic of prilled fertiliser?	Very round and free-flowing
+What particle size characterises granular fertiliser?	2 - 4mm
+What is a characteristic of granular fertiliser?	Free from dust
+Why might liquid fertiliser be prone to leaching?	Because it is soluble and can wash away with water
+What equipment might be needed for liquid fertiliser application?	Specialist equipment for foliar feed application
+What NPK characteristics are recommended for Spring/Summer turf fertiliser?	High in N (Nitrogen)
+Why is Spring/Summer turf fertiliser high in Nitrogen?	To compensate for N lost due to removal of clippings and aid recovery from wear
+What NPK characteristics are recommended for Autumn/Winter turf fertiliser?	Low in N, high in K (Potassium)
+Why is Autumn/Winter turf fertiliser low in N and high in K?	To harden up the grass to withstand frost and wear
+What is base dressing?	Fertiliser applied to soil BEFORE sowing grass seed or laying turf
+What is top dressing?	Fertiliser applied to established turf
+When should base dressing be applied?	Before sowing grass seed or laying turf
+When should top dressing be applied?	To established turf (existing grass)
+What is the course code for Plant Nutrition?	NQGHS002
+What is the learning outcome number for Fertiliser Terminology?	LO2

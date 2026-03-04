@@ -1,0 +1,161 @@
+{
+  "title": "Plant Nutrition & Fertiliser Terminology",
+  "flashcards": [
+    {
+      "question": "What do the three numbers on fertiliser containers represent?",
+      "answer": "The percentage by weight of the macronutrients N (Nitrogen), P (Phosphorus), and K (Potassium) available to plants"
+    },
+    {
+      "question": "In what form is Nitrogen quoted on fertiliser labels?",
+      "answer": "As Ammonia (NH\u2083) or Nitrate (NO\u2083) or a mixture of both"
+    },
+    {
+      "question": "In what form is Phosphorus expressed in fertiliser analysis?",
+      "answer": "Phosphorus Pentoxide (P\u2082O\u2085)"
+    },
+    {
+      "question": "In what form is Potassium expressed in fertiliser analysis?",
+      "answer": "Potassium Oxide (K\u2082O)"
+    },
+    {
+      "question": "How much Nitrogen is in a 25kg bag of 20:40:10 fertiliser?",
+      "answer": "5kg (20% of 25kg)"
+    },
+    {
+      "question": "How much Phosphorus is in a 25kg bag of 20:40:10 fertiliser?",
+      "answer": "10kg (40% of 25kg)"
+    },
+    {
+      "question": "How much Potassium is in a 25kg bag of 20:40:10 fertiliser?",
+      "answer": "2.5kg (10% of 25kg)"
+    },
+    {
+      "question": "What is nutrient ratio?",
+      "answer": "The fertiliser analysis broken down into the lowest common multiplier"
+    },
+    {
+      "question": "What do fertilisers 3:3:6 and 5:5:10 have in common?",
+      "answer": "Both have a nutrient ratio of 1:1:2"
+    },
+    {
+      "question": "What is another name for 'Nutrient Ratio'?",
+      "answer": "PER (Plant Food Ratio)"
+    },
+    {
+      "question": "What are inorganic fertilisers?",
+      "answer": "Fertilisers that are mined, quarried or manufactured"
+    },
+    {
+      "question": "Why do inorganic fertilisers act quickly?",
+      "answer": "They contain plant nutrients in a form readily available for plant use"
+    },
+    {
+      "question": "What are two characteristics of inorganic fertilisers?",
+      "answer": "Consistent analysis and uniform particle size"
+    },
+    {
+      "question": "What response do inorganic fertilisers produce in plants?",
+      "answer": "A rapid response in plant growth"
+    },
+    {
+      "question": "What are organic fertilisers?",
+      "answer": "Fertilisers of plant or animal origin"
+    },
+    {
+      "question": "Why are organic fertilisers slow release?",
+      "answer": "They contain few nutrients in a soluble form; nutrients must be converted by soil organisms"
+    },
+    {
+      "question": "What are two exceptions to slow-release organic fertilisers?",
+      "answer": "Dried blood and urea (both are fast acting)"
+    },
+    {
+      "question": "What is a key safety advantage of organic fertilisers?",
+      "answer": "Less risk of scorch (fertiliser burn) to plant leaves or roots"
+    },
+    {
+      "question": "What characterises slow-release fertiliser?",
+      "answer": "Organic fertilisers that vary in particle size; larger particles take longer to break down"
+    },
+    {
+      "question": "How does controlled-release fertiliser work?",
+      "answer": "Has a climate-controlled mechanism; releases more nutrients as temperature rises and moisture is available"
+    },
+    {
+      "question": "How long can controlled-release fertiliser be structured to provide nutrients?",
+      "answer": "Several months"
+    },
+    {
+      "question": "What is the main characteristic of traditional/conventional release fertilisers?",
+      "answer": "Have no controlling factors; nutrients release, peak and finish quickly, often in weeks"
+    },
+    {
+      "question": "What particle size characterises prilled fertiliser?",
+      "answer": "1.5 - 2.0mm"
+    },
+    {
+      "question": "How is prilled fertiliser made?",
+      "answer": "By cooling liquid into solid pellets"
+    },
+    {
+      "question": "What is a characteristic of prilled fertiliser?",
+      "answer": "Very round and free-flowing"
+    },
+    {
+      "question": "What particle size characterises granular fertiliser?",
+      "answer": "2 - 4mm"
+    },
+    {
+      "question": "What is a characteristic of granular fertiliser?",
+      "answer": "Free from dust"
+    },
+    {
+      "question": "Why might liquid fertiliser be prone to leaching?",
+      "answer": "Because it is soluble and can wash away with water"
+    },
+    {
+      "question": "What equipment might be needed for liquid fertiliser application?",
+      "answer": "Specialist equipment for foliar feed application"
+    },
+    {
+      "question": "What NPK characteristics are recommended for Spring/Summer turf fertiliser?",
+      "answer": "High in N (Nitrogen)"
+    },
+    {
+      "question": "Why is Spring/Summer turf fertiliser high in Nitrogen?",
+      "answer": "To compensate for N lost due to removal of clippings and aid recovery from wear"
+    },
+    {
+      "question": "What NPK characteristics are recommended for Autumn/Winter turf fertiliser?",
+      "answer": "Low in N, high in K (Potassium)"
+    },
+    {
+      "question": "Why is Autumn/Winter turf fertiliser low in N and high in K?",
+      "answer": "To harden up the grass to withstand frost and wear"
+    },
+    {
+      "question": "What is base dressing?",
+      "answer": "Fertiliser applied to soil BEFORE sowing grass seed or laying turf"
+    },
+    {
+      "question": "What is top dressing?",
+      "answer": "Fertiliser applied to established turf"
+    },
+    {
+      "question": "When should base dressing be applied?",
+      "answer": "Before sowing grass seed or laying turf"
+    },
+    {
+      "question": "When should top dressing be applied?",
+      "answer": "To established turf (existing grass)"
+    },
+    {
+      "question": "What is the course code for Plant Nutrition?",
+      "answer": "NQGHS002"
+    },
+    {
+      "question": "What is the learning outcome number for Fertiliser Terminology?",
+      "answer": "LO2"
+    }
+  ]
+}
