@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Nutrition NQGHS002 LO2 - Manures vs Fertilisers Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 24px 16px 32px;
+        }
+
+        .quiz-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: none;
+            max-width: 520px;
+            width: 100%;
+            padding: 18px 16px 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 640px;
+        }
+
+        .quiz-header {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        .quiz-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #232323;
+            margin-bottom: 4px;
+        }
+
+        .quiz-subtitle {
+            font-size: 13px;
+            color: #9d9d9d;
+        }
+
+        .progress-text {
+            text-align: left;
+            font-size: 13px;
+            color: #9d9d9d;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .question-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .options::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .options::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+
+        .options::-webkit-scrollbar-thumb {
+            background: #c0c0c0;
+            border-radius: 3px;
+        }
+
+        .options::-webkit-scrollbar-thumb:hover {
+            background: #a0a0a0;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #f8f8f8;
+        }
+
+        .option:hover:not(.selected):not(.disabled) {
+            border-color: #e6e6e6;
+            background: #f6f6f6;
+        }
+
+        .option.selected {
+            border-color: #d0d0d0;
+            background: #dedede;
+        }
+
+        .option.correct,
+        .option.wrong {
+            border-color: #f0f0f0;
+            background: #f8f8f8;
+        }
+
+        .option.disabled {
+            cursor: default;
+        }
+
+        .option-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            margin-right: 10px;
+            flex-shrink: 0;
+            color: #9d9d9d;
+            width: 22px;
+        }
+
+        .option.selected .option-label {
+            color: #3a3a3a;
+        }
+
+        .option.disabled .option-text {
+            color: #bdbdbd;
+        }
+
+        .option.disabled .option-label {
+            color: #bdbdbd;
+        }
+
+        .option-text {
+            flex: 1;
+            font-size: 15px;
+            color: #3a3a3a;
+        }
+
+
+        .feedback-card {
+            padding: 14px 16px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .feedback-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feedback-card.correct {
+            background: #bfeacb;
+        }
+
+        .feedback-card.wrong {
+            background: #fff7f7;
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .feedback-header.correct {
+            color: #697b6e;
+        }
+
+        .feedback-header.wrong {
+            color: #a42d22;
+        }
+
+        .feedback-icon {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .feedback-answer {
+            font-size: 15px;
+            color: #2a2a2a;
+        }
+
+        .feedback-text {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .feedback-card.correct .feedback-text {
+            color: #444443;
+        }
+
+        .feedback-card.wrong .feedback-text {
+            color: #2e2e2f;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 24px;
+            min-height: 52px;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            min-width: 120px;
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #6b7280;
+            border: 1px solid #e2e2e2;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: #e5e5e5;
+        }
+
+        .btn-secondary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: #424cf7;
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(66, 76, 247, 0.25);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+
+        .completion-container {
+            text-align: center;
+            display: none;
+        }
+
+        .completion-container.show {
+            display: block;
+        }
+
+        .completion-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .completion-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .completion-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .stat-card.score {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .stat-card.score .stat-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .stat-card.score .stat-value {
+            color: white;
+        }
+
+        .completion-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .hint-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #4e4e4e;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .hint-toggle .chevron {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .hint-toggle.open .chevron {
+            transform: rotate(180deg);
+        }
+
+        .hint-panel {
+            padding: 12px 14px;
+            background: #ebecf8;
+            border-radius: 12px;
+            display: none;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .hint-panel.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hint-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #4e4e4e;
+            margin-bottom: 6px;
+        }
+
+        .hint-text {
+            font-size: 13px;
+            color: #474749;
+            line-height: 1.5;
+        }
+
+        .hint-slot {
+            min-height: 72px;
+        }
+
+        .quiz-footer {
+            margin-top: auto;
+        }
+
+        .question-container {
+            display: none;
+        }
+
+        .question-container.active {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <div class="quiz-title">Plant Nutrition NQGHS002 LO2 - Manures vs Fertilisers Quiz</div>
+            <div class="quiz-subtitle">Based on 1 source</div>
+        </div>
+
+        <div id="quiz-content">
+            <!-- Questions will be rendered here -->
+        </div>
+
+        <div id="completion-screen" class="completion-container">
+            <div class="completion-icon">🎉</div>
+            <div class="completion-title">You did it! Quiz Complete.</div>
+            <div class="completion-subtitle">Here's how you performed</div>
+
+            <div class="stats-grid">
+                <div class="stat-card score">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score-value">0/15</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Accuracy</div>
+                    <div class="stat-value" id="accuracy-value">0%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Right</div>
+                    <div class="stat-value" id="right-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Wrong</div>
+                    <div class="stat-value" id="wrong-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Skipped</div>
+                    <div class="stat-value" id="skipped-value">0</div>
+                </div>
+            </div>
+
+            <div class="completion-buttons">
+                <button class="btn btn-secondary" onclick="reviewQuiz()">Review Quiz</button>
+                <button class="btn btn-primary" onclick="retakeQuiz()">Retake Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/contrib/auto-render.min.js"></script>
+    <script>
+        const questions = [{"question": "What is the main source of manure?", "options": ["Chemical factories", "Decomposition of dead plants and animals", "Mining operations", "Laboratory synthesis"], "correctIndex": 1, "hint": "Think about natural processes", "correctExplanation": "Manure is obtained naturally by the decomposition of dead plants and animals.", "wrongExplanation": "Manure comes from natural decomposition, not factories or labs."}, {"question": "Are fertilisers typically natural or manufactured?", "options": ["Natural", "Manufactured", "Both equally", "Neither"], "correctIndex": 1, "hint": "They're made in factories", "correctExplanation": "Fertilisers are chemical substances that are manufactured, not typically natural.", "wrongExplanation": "Fertilisers are manufactured in factories, not natural."}, {"question": "Which is richer in nutrients - manure or fertilisers?", "options": ["Manure", "Fertilisers", "They are equal", "Neither contains nutrients"], "correctIndex": 1, "hint": "One is concentrated, one is not very rich", "correctExplanation": "Fertilisers are rich in soil nutrients like nitrogen, phosphorous, and potassium.", "wrongExplanation": "Manure is not very rich in nutrients, while fertilisers are concentrated."}, {"question": "How is manure absorbed by plants compared to fertilisers?", "options": ["Faster than fertilisers", "Slower than fertilisers", "At the same rate", "Not absorbed at all"], "correctIndex": 1, "hint": "Manure needs to break down first", "correctExplanation": "Manure is slowly absorbed as it needs to break down, while fertilisers are easily absorbed (soluble).", "wrongExplanation": "Manure is slowly absorbed because it needs to break down first."}, {"question": "Which provides humus to the soil?", "options": ["Only manure", "Only fertilisers", "Both equally", "Neither"], "correctIndex": 0, "hint": "One provides a lot, the other provides none", "correctExplanation": "Manure provides a lot of humus to the soil, while fertilisers do not provide any humus.", "wrongExplanation": "Manure provides humus; fertilisers do not."}, {"question": "Where are manures prepared?", "options": ["In factories", "Naturally, close to or on site", "In laboratories", "In chemical plants"], "correctIndex": 1, "hint": "Think about where natural decomposition happens", "correctExplanation": "Manures are prepared naturally, close to or on site.", "wrongExplanation": "Manures are prepared naturally on site, not in factories."}, {"question": "Which is easier to apply - manure or fertilisers?", "options": ["Manure - it's bulky", "Fertilisers - they're concentrated", "Both are equally easy", "Neither can be applied"], "correctIndex": 1, "hint": "Concentrated substances are easier to handle", "correctExplanation": "Fertilisers are concentrated and easier to apply, while manure is bulky and harder to apply.", "wrongExplanation": "Fertilisers are concentrated and easier; manure is bulky and harder."}, {"question": "What happens if fertilisers are supplied in large quantities?", "options": ["Nothing happens", "They can cause root burn", "Plants grow faster", "Soil becomes richer"], "correctIndex": 1, "hint": "Think about adverse effects", "correctExplanation": "Fertilisers adversely affect the soil and plant if supplied in large quantities, causing root burn.", "wrongExplanation": "Large quantities of fertilisers can harm plants and cause root burn."}, {"question": "What is the NPK value of average home made compost?", "options": ["N: 1%, P: 0.5%, K: 1.5%", "N: 0.5%, P: 0.25%, K: 0.75%", "N: 2%, P: 1%, K: 3%", "N: 0.1%, P: 0.1%, K: 0.1%"], "correctIndex": 1, "hint": "Check the table in your notes", "correctExplanation": "Average home made compost has N: 0.5%, P: 0.25%, K: 0.75%.", "wrongExplanation": "The correct NPK is N: 0.5%, P: 0.25%, K: 0.75%."}, {"question": "What does NPK stand for?", "options": ["Nitrogen, Phosphorus, Potassium", "Nitrogen, Phosphorous, Potash", "Natural, Processed, Kinetic", "New, Prepared, Known"], "correctIndex": 1, "hint": "K is the chemical symbol for potassium, also called potash", "correctExplanation": "NPK stands for Nitrogen, Phosphorous, and Potassium (Potash).", "wrongExplanation": "NPK = Nitrogen, Phosphorous, Potassium (Potash)."}, {"question": "What is the PFR ratio for home made compost?", "options": ["1:1:1", "2:1:3", "3:2:1", "1:2:2"], "correctIndex": 1, "hint": "Based on NPK values 0.5:0.25:0.75", "correctExplanation": "The PFR ratio is 2:1:3 (N:P:K based on 0.5:0.25:0.75).", "wrongExplanation": "The PFR ratio is 2:1:3."}, {"question": "What is the NPK value of bone meal?", "options": ["3-15-0", "13-0-0", "12-0-0", "0-0-0"], "correctIndex": 0, "hint": "High in phosphorus (P)", "correctExplanation": "Bone meal has an NPK value of 3-15-0 (high in phosphorus).", "wrongExplanation": "Bone meal is 3-15-0."}, {"question": "What is the NPK value of hoof and horn?", "options": ["3-15-0", "13-0-0", "12-0-0", "0-0-0"], "correctIndex": 1, "hint": "High in nitrogen (N)", "correctExplanation": "Hoof and horn has an NPK value of 13-0-0 (high in nitrogen).", "wrongExplanation": "Hoof and horn is 13-0-0."}, {"question": "Are bone meal, hoof and horn, and dried blood organic or inorganic?", "options": ["Inorganic", "Organic", "Synthetic", "Chemical"], "correctIndex": 1, "hint": "They come from animal sources", "correctExplanation": "These are organic sources with slow release and less risk of scorch.", "wrongExplanation": "These are organic fertilisers from animal sources."}, {"question": "Which characteristic describes inorganic fertilisers?", "options": ["Slow release only", "Soluble and fast release", "Never manufactured", "Particle size dependent"], "correctIndex": 1, "hint": "Think about manufactured fertilisers", "correctExplanation": "Inorganic fertilisers are soluble, fast release, with uniform particle size and consistent analysis.", "wrongExplanation": "Inorganic fertilisers are soluble and fast release."}];
+        const totalQuestions = questions.length;
+        let currentQuestionIndex = 0;
+        let userAnswers = []; // Store user's answers {questionIndex, selectedIndex, isCorrect}
+        let isReviewMode = false;
+
+        function renderMath(target) {
+            if (!target || typeof renderMathInElement !== 'function') return;
+            renderMathInElement(target, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\(', right: '\)', display: false},
+                    {left: '\[', right: '\]', display: true}
+                ],
+                throwOnError: false
+            });
+        }
+
+        function initQuiz() {
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const quizContent = document.getElementById('quiz-content');
+            const question = questions[currentQuestionIndex];
+            const userAnswer = userAnswers[currentQuestionIndex];
+
+            const isAnswered = userAnswer !== undefined;
+
+            // Determine button states
+            const showPrevious = currentQuestionIndex > 0;
+            const showNext = isAnswered && currentQuestionIndex < totalQuestions - 1;
+            const showFinish = isAnswered && currentQuestionIndex === totalQuestions - 1 && !isReviewMode;
+            const showFinishReview = isReviewMode && currentQuestionIndex === totalQuestions - 1;
+            const showHint = !!question.hint;
+
+            let optionsHtml = '';
+            question.options.forEach((option, index) => {
+                const letter = String.fromCharCode(65 + index); // A, B, C, D
+
+                if (isAnswered) {
+                    if (index === question.correctIndex) {
+                        const correctExplain = question.correctExplanation || question.explanation || '';
+                        optionsHtml += `
+                            <div class="feedback-card correct show">
+                                <div class="feedback-answer">${letter}. ${option}</div>
+                                <div class="feedback-header correct">
+                                    <span class="feedback-icon">✓</span>
+                                    <span>Right answer</span>
+                                </div>
+                                <div class="feedback-text">${correctExplain}</div>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    if (!userAnswer.isCorrect && index === userAnswer.selectedIndex) {
+                        const wrongExplain = question.wrongExplanation || question.explanation || '';
+                        optionsHtml += `
+                            <div class="feedback-card wrong show">
+                                <div class="feedback-answer">${letter}. ${option}</div>
+                                <div class="feedback-header wrong">
+                                    <span class="feedback-icon">✕</span>
+                                    <span>Not quite</span>
+                                </div>
+                                <div class="feedback-text">${wrongExplain}</div>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    optionsHtml += `
+                        <div class="option disabled" data-index="${index}">
+                            <span class="option-label">${letter}.</span>
+                            <span class="option-text">${option}</span>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const optionClass = index === (userAnswer ? userAnswer.selectedIndex : -1) ? 'option selected' : 'option';
+                optionsHtml += `
+                    <div class="${optionClass}" onclick="selectAnswer(${index})" data-index="${index}">
+                        <span class="option-label">${letter}.</span>
+                        <span class="option-text">${option}</span>
+                    </div>
+                `;
+            });
+
+            let hintHtml = '';
+            if (showHint) {
+                hintHtml = `
+                    <button class="hint-toggle" id="hint-toggle" onclick="toggleHint()">
+                        <span>Hint</span>
+                        <span class="chevron">⌃</span>
+                    </button>
+                    <div id="hint-panel" class="hint-panel">
+                        <div class="hint-title">Hint</div>
+                        <div class="hint-text">${question.hint}</div>
+                    </div>
+                `;
+            }
+
+            let buttonsHtml = `
+                <div class="quiz-footer">
+                    <div class="buttons">
+                        <div style="display: flex; gap: 12px;">
+                            <button class="btn btn-secondary" onclick="previousQuestion()" ${showPrevious ? '' : 'disabled'}>
+                                Previous
+                            </button>
+                        </div>
+                        <div>
+                            ${showNext ? '<button class="btn btn-primary" onclick="nextQuestion()">Next</button>' : ''}
+                            ${showFinish ? '<button class="btn btn-primary" onclick="finishQuiz()">Finish Quiz</button>' : ''}
+                            ${showFinishReview ? '<button class="btn btn-primary" onclick="finishReview()">Finish Review</button>' : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            quizContent.innerHTML = `
+                <div class="progress-text">${currentQuestionIndex + 1} / ${totalQuestions}</div>
+                <div class="question-text">${question.question}</div>
+                <div class="options">
+                    ${optionsHtml}
+                </div>
+                <div class="hint-slot">
+                    ${hintHtml}
+                </div>
+                ${buttonsHtml}
+            `;
+            renderMath(quizContent);
+        }
+
+        function selectAnswer(selectedIndex) {
+            const question = questions[currentQuestionIndex];
+            const isCorrect = selectedIndex === question.correctIndex;
+
+            // Store the answer
+            userAnswers[currentQuestionIndex] = {
+                questionIndex: currentQuestionIndex,
+                selectedIndex: selectedIndex,
+                isCorrect: isCorrect
+            };
+
+            // Re-render to show feedback
+            renderQuestion();
+        }
+
+        function toggleHint() {
+            const hintPanel = document.getElementById('hint-panel');
+            const hintToggle = document.getElementById('hint-toggle');
+            if (hintPanel) {
+                hintPanel.classList.toggle('show');
+            }
+            if (hintToggle) {
+                hintToggle.classList.toggle('open');
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < totalQuestions - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        function finishQuiz() {
+            showCompletionScreen();
+        }
+
+        function showCompletionScreen() {
+            const quizContent = document.getElementById('quiz-content');
+            const completionScreen = document.getElementById('completion-screen');
+
+            // Calculate stats
+            const answeredQuestions = userAnswers.filter(a => a !== undefined);
+            const correctAnswers = userAnswers.filter(a => a && a.isCorrect).length;
+            const wrongAnswers = userAnswers.filter(a => a && !a.isCorrect).length;
+            const skipped = totalQuestions - answeredQuestions.length;
+            const accuracy = answeredQuestions.length > 0
+                ? Math.round((correctAnswers / answeredQuestions.length) * 100)
+                : 0;
+
+            // Update stats
+            document.getElementById('score-value').textContent = `${correctAnswers}/${totalQuestions}`;
+            document.getElementById('accuracy-value').textContent = `${accuracy}%`;
+            document.getElementById('right-value').textContent = correctAnswers;
+            document.getElementById('wrong-value').textContent = wrongAnswers;
+            document.getElementById('skipped-value').textContent = skipped;
+
+            // Show completion screen
+            quizContent.style.display = 'none';
+            completionScreen.classList.add('show');
+        }
+
+        function reviewQuiz() {
+            isReviewMode = true;
+            currentQuestionIndex = 0;
+            const quizContent = document.getElementById('quiz-content');
+            const completionScreen = document.getElementById('completion-screen');
+
+            quizContent.style.display = 'block';
+            completionScreen.classList.remove('show');
+            renderQuestion();
+        }
+
+        function finishReview() {
+            showCompletionScreen();
+        }
+
+        function retakeQuiz() {
+            isReviewMode = false;
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            const quizContent = document.getElementById('quiz-content');
+            const completionScreen = document.getElementById('completion-screen');
+
+            quizContent.style.display = 'block';
+            completionScreen.classList.remove('show');
+            renderQuestion();
+        }
+
+        // Initialize quiz on page load
+        initQuiz();
+    </script>
+</body>
+</html>
